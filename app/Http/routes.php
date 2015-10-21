@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get ( 'ws/genesystel_pdf', ['as' => 'genesystel_pdf', function () {
+	
+// 		$name = Request::input('name');
+// 		$email = Request::input('email');
+// 		$send_message = Request::input('message');
+	
+	    error_log("enter");
+			return "success";
+}]);

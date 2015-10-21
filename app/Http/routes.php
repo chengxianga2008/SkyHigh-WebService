@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 
-Route::get( '/ws/genesystel_pdf', ['as' => 'genesystel_pdf', function () {
+Route::get1( '/ws/genesystel_pdf', ['as' => 'genesystel_pdf', function () {
 	
 	$contract_number = Request::input('contract_number');
 	$code = Request::input('code');

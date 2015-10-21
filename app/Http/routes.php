@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get ( 'ws/genesystel_pdf', ['as' => 'genesystel_pdf', function () {
+Route::get ( '/ws/genesystel_pdf', ['as' => 'genesystel_pdf', function () {
 	
 // 		$name = Request::input('name');
 // 		$email = Request::input('email');

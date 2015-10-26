@@ -28,7 +28,7 @@ Route::get( '/ws/genesystel_pdf', ['as' => 'genesystel_pdf', function () {
 		return;
 	}
 	
- 		
+// by Jack		
 //	asset('css/bootstrap.min.css');
 	$pdf = new Pdf('resources/Genesystel_Landline_combined_contract.pdf');
 	$pdf->fillForm(array('Contract ID'=> $contract_number))

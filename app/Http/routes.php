@@ -35,8 +35,10 @@ Route::get( '/ws/genesystel_pdf', ['as' => 'genesystel_pdf', function () {
 	    ->needAppearances()
 	    ->saveAs('filled/Genesystel_Landline_combined_contract.pdf');
 	
-	return response(file_get_contents('filled/Genesystel_Landline_combined_contract.pdf'), 200)
-        ->header('Content-type', 'application/pdf')
-	    ->header('Content-Disposition', 'inline; filename="Genesystel_Landline_Internet_combined_contract_'.$contract_number.'.pdf"');
+	return response()->download('filled/Genesystel_Landline_combined_contract.pdf', 'Genesystel_Landline_Internet_combined_contract_'.$contract_number.'.pdf');
+	
+// 	return response(file_get_contents('filled/Genesystel_Landline_combined_contract.pdf'), 200)
+//         ->header('Content-type', 'application/pdf')
+// 	    ->header('Content-Disposition', 'inline; filename="Genesystel_Landline_Internet_combined_contract_'.$contract_number.'.pdf"');
 			
 }]);
